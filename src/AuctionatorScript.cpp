@@ -15,6 +15,8 @@ public:
     {
         LOG_INFO("server.loading", "[Auctionator]: Auctionator initializing...");
         if (gAuctionator->config->isEnabled) {
+            LOG_INFO("server.loading", "[Auctionator]: Workaround started.");
+            sWorld->LoadConfigSettings(true);
             LOG_INFO("server.loading", "[Auctionator]: Auctionator enabled.");
         } else {
             LOG_INFO("server.loading", "[Auctionator]: Auctionator disabled.");
