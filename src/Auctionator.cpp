@@ -176,6 +176,7 @@ void Auctionator::Initialize()
     WorldSession _session(
         config->characterId,
         std::move(accountName),
+        0,
         nullptr,
         SEC_GAMEMASTER,
         sWorld->getIntConfig(CONFIG_EXPANSION),
