@@ -25,7 +25,7 @@ AuctionatorSeller::~AuctionatorSeller()
 void AuctionatorSeller::LetsGetToIt(uint32 maxCount, uint32 houseId)
 {
     std::string characterDbName = CharacterDatabase.GetConnectionInfo()->database;
-    static std::vector<CachedItem> cachedItems = []() {
+    static std::vector<CachedItem> cachedItems = [characterDbName]() {
         std::vector<CachedItem> items;
 
         std::string cacheQuery = R"(
